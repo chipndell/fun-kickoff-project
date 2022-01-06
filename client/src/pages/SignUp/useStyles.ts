@@ -12,7 +12,6 @@ const useStyles = makeStyles(() => ({
     alignItems: 'flex-start',
     justifyContent: 'space-between',
     flexDirection: 'column',
-    minHeight: '100vh',
     paddingTop: 23,
   },
   welcome: {
@@ -20,6 +19,23 @@ const useStyles = makeStyles(() => ({
     paddingBottom: 20,
     color: '#000000',
     fontWeight: 700,
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  paper: {
+    rounded: true,
+    padding: 50,
+  },
+  typograph: {
+    textAlign: 'center',
+    paddingTop: 25,
+  },
+  linkstyle: {
+    paddingLeft: 15,
+  },
+  formstyle: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 }));
 
