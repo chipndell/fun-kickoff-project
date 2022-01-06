@@ -12,12 +12,18 @@ const useStyles = makeStyles(() => ({
   },
   welcome: {
     fontSize: 26,
+    paddingTop: 20,
     paddingBottom: 20,
     color: '#000000',
     fontWeight: 700,
   },
   paper: {
     rounded: true,
+    padding: 50,
+  },
+  formstyle: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 }));
 

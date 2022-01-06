@@ -49,7 +49,7 @@ export default function Login(): JSX.Element {
         </Box>
         <Box display="flex" alignItems="center" justifyContent="center" height="80%">
           <Paper elevation={6} className={classes.paper}>
-            <Box width="100%" maxWidth={450} p={3} alignSelf="center">
+            <Box alignSelf="center">
               <Grid container>
                 <Grid item xs>
                   <Typography className={classes.welcome} align="center" component="h1" variant="h5">
@@ -57,7 +57,9 @@ export default function Login(): JSX.Element {
                   </Typography>
                 </Grid>
               </Grid>
-              <LoginForm handleSubmit={handleSubmit} />
+              <Box className={classes.formstyle}>
+                <LoginForm handleSubmit={handleSubmit} />
+              </Box>
             </Box>
             <Box p={1} alignSelf="center" />
           </Paper>
