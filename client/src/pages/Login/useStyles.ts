@@ -8,7 +8,6 @@ const useStyles = makeStyles(() => ({
     },
   },
   authWrapper: {
-    minHeight: '100vh',
     paddingTop: 23,
   },
   welcome: {
