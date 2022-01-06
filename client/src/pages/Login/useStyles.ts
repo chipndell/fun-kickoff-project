@@ -17,6 +17,9 @@ const useStyles = makeStyles(() => ({
     color: '#000000',
     fontWeight: 700,
   },
+  paper: {
+    rounded: true,
+  },
 }));
 
 export default useStyles;

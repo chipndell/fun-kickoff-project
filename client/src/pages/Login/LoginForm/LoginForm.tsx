@@ -59,6 +59,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             }}
             name="email"
             autoComplete="email"
+            placeholder="Your email"
             autoFocus
             helperText={touched.email ? errors.email : ''}
             error={touched.email && Boolean(errors.email)}
@@ -79,6 +80,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             }}
             type="password"
             autoComplete="current-password"
+            placeholder="Your Password"
             helperText={touched.password ? errors.password : ''}
             error={touched.password && Boolean(errors.password)}
             value={values.password}
