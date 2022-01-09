@@ -21,10 +21,6 @@ const useStyles = makeStyles(() => ({
     rounded: true,
     padding: 50,
   },
-  formstyle: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
 }));
 
 export default useStyles;

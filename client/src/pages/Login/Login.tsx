@@ -57,7 +57,7 @@ export default function Login(): JSX.Element {
                   </Typography>
                 </Grid>
               </Grid>
-              <Box className={classes.formstyle}>
+              <Box display="flex" justifyContent="center">
                 <LoginForm handleSubmit={handleSubmit} />
               </Box>
             </Box>

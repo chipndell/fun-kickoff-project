@@ -9,7 +9,7 @@ import SignUpForm from './SignUpForm/SignUpForm';
 import AuthHeader from '../../components/AuthHeader/AuthHeader';
 import { useAuth } from '../../context/useAuthContext';
 import { useSnackBar } from '../../context/useSnackbarContext';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 
 export default function Register(): JSX.Element {
   const classes = useStyles();
@@ -58,12 +58,12 @@ export default function Register(): JSX.Element {
                 </Typography>
               </Grid>
             </Grid>
-            <Box className={classes.formstyle}>
+            <Box display="flex" justifyContent="center">
               <SignUpForm handleSubmit={handleSubmit} />
             </Box>
             <Typography className={classes.typograph}>
               Already a member?
-              <Link className={classes.linkstyle} href="/login">
+              <Link className={classes.linkstyle} to="/login">
                 Login
               </Link>
             </Typography>

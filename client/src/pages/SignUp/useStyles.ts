@@ -33,10 +33,6 @@ const useStyles = makeStyles(() => ({
   linkstyle: {
     paddingLeft: 15,
   },
-  formstyle: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
 }));
 
 export default useStyles;
