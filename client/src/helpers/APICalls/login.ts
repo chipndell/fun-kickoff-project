@@ -1,5 +1,4 @@
-import { User } from '../../interface/User';
-import { AuthApiData, AuthApiDataSuccess } from '../../interface/AuthApiData';
+import { AuthApiData } from '../../interface/AuthApiData';
 import { FetchOptions } from '../../interface/FetchOptions';
 
 const login = async (email: string, password: string): Promise<AuthApiData> => {
@@ -22,7 +21,7 @@ const login = async (email: string, password: string): Promise<AuthApiData> => {
         message: 'success',
       },
     }))
-    .catch((err) => ({
+    .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
     }));
 };

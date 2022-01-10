@@ -20,7 +20,7 @@ const register = async (username: string, email: string, password: string): Prom
         message: 'success',
       },
     }))
-    .catch((err) => ({
+    .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
     }));
 };

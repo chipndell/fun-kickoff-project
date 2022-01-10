@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import { Menu as MenuIcon, AccountCircle } from '@mui/icons-material';
 import { Person as ProfileIcon, Logout as LogoutIcon, Settings as SettingsIcon } from '@mui/icons-material';
+import Avatar from '@mui/material/Avatar';
 
 const Navbar: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -52,7 +53,7 @@ const Navbar: React.FC = () => {
               onClick={handleMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <Avatar alt="Remy Sharp" src={'../../Images/68f55f7799df6c8078a874cfe0a61a5e6e9e1687.png'} />
             </IconButton>
             <Menu
               id="menu-appbar"
