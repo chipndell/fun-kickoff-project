@@ -9,6 +9,7 @@ import SignUpForm from './SignUpForm/SignUpForm';
 import AuthHeader from '../../components/AuthHeader/AuthHeader';
 import { useAuth } from '../../context/useAuthContext';
 import { useSnackBar } from '../../context/useSnackbarContext';
+import { Link } from 'react-router-dom';
 
 export default function Register(): JSX.Element {
   const classes = useStyles();
@@ -38,7 +39,7 @@ export default function Register(): JSX.Element {
 
   return (
     <Grid container component="main" className={classes.root}>
-      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} square>
+      <Grid item xs={12} component={Paper} square>
         <Box
           display="flex"
           justifyContent="space-between"
@@ -47,18 +48,28 @@ export default function Register(): JSX.Element {
           className={classes.authWrapper}
         >
           <AuthHeader linkTo="/login" asideText="Already have an account?" btnText="Login" />
-          <Box width="100%" maxWidth={450} p={3} alignSelf="center">
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" height="80%">
+          <Paper elevation={6} className={classes.paper}>
             <Grid container>
               <Grid item xs>
                 <Typography className={classes.welcome} component="h1" variant="h5">
-                  Create an account
+                  Sign Up
                 </Typography>
               </Grid>
             </Grid>
-            <SignUpForm handleSubmit={handleSubmit} />
-          </Box>
-          <Box p={1} alignSelf="center" />
+            <Box display="flex" justifyContent="center">
+              <SignUpForm handleSubmit={handleSubmit} />
+            </Box>
+            <Typography className={classes.typograph}>
+              Already a member?
+              <Link className={classes.linkstyle} to="/login">
+                Login
+              </Link>
+            </Typography>
+          </Paper>
         </Box>
+        <Box p={1} alignSelf="center" />
       </Grid>
     </Grid>
   );
