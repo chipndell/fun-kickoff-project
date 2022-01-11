@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema  = mongoose.Schema;
 
 const AvailabilityDay = new Schema({
-  day: { type: Number },
+  date: { type: Date },
   duration: {
     from: { type: Number },
     to: { type: Number }
@@ -40,9 +40,6 @@ const profileSchema = new mongoose.Schema({
   },
 
 });
-
-profileSchema.methods.matchPassword = async function (enteredPassword) {
-};
 
 
 module.exports = User = mongoose.model("profile", profileSchema);
