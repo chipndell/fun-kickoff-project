@@ -1,14 +1,5 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
-const Schema  = mongoose.Schema;
-
-const AvailabilityDay = new Schema({
-  day: { type: Number },
-  duration: {
-    from: { type: Number },
-    to: { type: Number }
-  }
-});
 
 const userSchema = new mongoose.Schema({
   username: {
@@ -25,39 +16,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  first_name:{
-    type: String,
-    required: false,
-  },
-  last_name:{
-    type: String,
-    required: false,
-  },
-  date_of_birth:{
-    type: Date,
-    required: false,
-  },
-  phone_number:{
-    type: Number,
-    required: false,
-  },
-  location:{
-    type: String,
-    required: false,
-  },
   register_date: {
     type: Date,
     default: Date.now
-  },
-  description: {
-    type: String,
-    required: false,
-  },
-  availability:{
-    type: [AvailabilityDay],
-    required: false,
-  },
-
+  }
 });
 
 userSchema.methods.matchPassword = async function (enteredPassword) {
