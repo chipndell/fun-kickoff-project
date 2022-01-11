@@ -33,8 +33,8 @@ function App(): JSX.Element {
                   <Dashboard />
                 </Route>
                 <Route exact path="/profile" component={User} />
-                <Route exact path="/edit_profile" component={EditProfile} />
-                <Route exact path="/profile_picture" component={ProfilePicture} />
+                <Route exact path="/edit-profile" component={EditProfile} />
+                <Route exact path="/profile-picture" component={ProfilePicture} />
                 <Route exact path="/availability" component={Availability} />
                 <Route exact path="/payment" component={Payment} />
                 <Route exact path="/security" component={Security} />

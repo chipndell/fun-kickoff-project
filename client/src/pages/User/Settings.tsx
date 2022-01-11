@@ -1,14 +1,10 @@
 import React from 'react';
-import useStyles from './useStyles';
-import { LoggedInUserBase, LoggedInUserSidebarPanel } from './User';
+import { Navbar } from '../../components/Navbar/Navbar';
 
 const Settings: React.FC = () => {
-  const classes = useStyles();
-
   return (
     <>
-      <LoggedInUserBase />
-      <LoggedInUserSidebarPanel />
+      <Navbar />
     </>
   );
 };

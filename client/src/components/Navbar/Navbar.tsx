@@ -11,7 +11,6 @@ import {
   ListItemText,
   Divider,
 } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
 import { Person as ProfileIcon, Logout as LogoutIcon, Settings as SettingsIcon } from '@mui/icons-material';
 import Avatar from '@mui/material/Avatar';
 import { Link } from 'react-router-dom';
@@ -38,10 +37,10 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="inherit">
       <Toolbar>
         <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-          <img src={icon} />
+          <img alt="logoIcon" src={icon} />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
         {loggedInUser && (
